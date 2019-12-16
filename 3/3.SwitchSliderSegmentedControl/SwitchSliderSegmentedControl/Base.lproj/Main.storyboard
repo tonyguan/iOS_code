@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwitchSliderSegmentedControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SliderValue：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKz-Rt-2rh">
+                                <rect key="frame" x="39" y="295" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZC9-ng-iGd">
+                                <rect key="frame" x="66" y="124" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="7Ca-Tj-S1W"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qS-8J-yKG">
+                                <rect key="frame" x="266" y="124" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="4lL-km-77h"/>
+                                </connections>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GwR-fZ-PfD">
+                                <rect key="frame" x="78" y="206" width="219" height="29"/>
+                                <segments>
+                                    <segment title="Left"/>
+                                    <segment title="Right"/>
+                                </segments>
+                                <connections>
+                                    <action selector="touchDown:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ecr-12-yLR"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCY-aj-qHd">
+                                <rect key="frame" x="171" y="295" width="20.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="QwF-Te-9XE">
+                                <rect key="frame" x="37" y="332" width="301" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="e0y-2J-QD4"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vKz-Rt-2rh" firstAttribute="baseline" secondItem="SCY-aj-qHd" secondAttribute="baseline" id="1CK-EF-rQJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2qS-8J-yKG" secondAttribute="trailing" constant="44" id="6iL-x4-PMp"/>
+                            <constraint firstItem="vKz-Rt-2rh" firstAttribute="leading" secondItem="QwF-Te-9XE" secondAttribute="leading" id="8mW-j1-HJY"/>
+                            <constraint firstItem="ZC9-ng-iGd" firstAttribute="top" secondItem="2qS-8J-yKG" secondAttribute="top" id="Bmc-vv-LmJ"/>
+                            <constraint firstItem="vKz-Rt-2rh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="23" id="C42-V3-knP"/>
+                            <constraint firstItem="GwR-fZ-PfD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cyv-js-JNF"/>
+                            <constraint firstItem="ZC9-ng-iGd" firstAttribute="centerX" secondItem="vKz-Rt-2rh" secondAttribute="centerX" id="OrI-7N-skI"/>
+                            <constraint firstItem="vKz-Rt-2rh" firstAttribute="top" secondItem="GwR-fZ-PfD" secondAttribute="bottom" constant="61" id="Pf2-zj-vPz"/>
+                            <constraint firstItem="GwR-fZ-PfD" firstAttribute="centerX" secondItem="QwF-Te-9XE" secondAttribute="centerX" id="aU7-mu-4gG"/>
+                            <constraint firstItem="ZC9-ng-iGd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="104" id="bQX-lV-4CW"/>
+                            <constraint firstItem="SCY-aj-qHd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vKz-Rt-2rh" secondAttribute="trailing" symbolic="YES" id="fHC-RD-ZrT"/>
+                            <constraint firstItem="QwF-Te-9XE" firstAttribute="top" secondItem="vKz-Rt-2rh" secondAttribute="bottom" constant="16" id="fpf-eI-rBn"/>
+                            <constraint firstItem="GwR-fZ-PfD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="62" id="jKM-YP-6dw"/>
+                            <constraint firstAttribute="trailing" secondItem="SCY-aj-qHd" secondAttribute="trailing" constant="183.5" id="uvh-Si-Nbv"/>
+                            <constraint firstItem="GwR-fZ-PfD" firstAttribute="top" secondItem="ZC9-ng-iGd" secondAttribute="bottom" constant="51" id="zpe-fp-qUZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leftSwitch" destination="ZC9-ng-iGd" id="2lm-fl-IXK"/>
+                        <outlet property="rightSwitch" destination="2qS-8J-yKG" id="nBq-BB-8H3"/>
+                        <outlet property="sliderValue" destination="SCY-aj-qHd" id="byB-TD-I7x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.600000000000001" y="66.11694152923539"/>
+        </scene>
+    </scenes>
+</document>
